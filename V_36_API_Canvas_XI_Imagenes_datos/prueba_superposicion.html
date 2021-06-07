@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    <style media="screen">
+    #lienzo{
+        border:1px solid #f00;
+
+    }
+
+
+    </style>
+
+    <script type="text/javascript">
+
+    var x=0;
+    var y=0;
+    function comenzar(){
+
+        var elemento=document.getElementById("lienzo");
+
+        lienzo=elemento.getContext("2d");
+
+        var imagen=new Image();
+
+        imagen.src="3.jpg";
+
+        imagen.addEventListener("load", manipularimagen, false);
+
+    }
+
+    function manipularimagen(e){
+
+        imagen=e.target;
+
+        lienzo.drawImage(imagen,0,0);
+
+        var info_imagen=lienzo.getImageData(0,0,145,145);
+
+        var posicion;
+
+        for(x=0; x<=200; x++) {
+            for(y=0; y<=200; y++){
+                posicion=(info_imagen.width*4*y)+(x*4);
+
+                info_imagen.data[posicion]=255-info_imagen.data[posicion];
+                info_imagen.data[posicion+1]=255-info_imagen.data[posicion+1];
+                info_imagen.data[posicion+2]=255-info_imagen.data[posicion+2];
+            }
+        }
+
+        lienzo.putImageData(info_imagen,300,250);
+    }
+
+    window.addEventListener("load",comenzar,false);
+
+    </script>
+
+
+    </head>
+    <body>
+        <section>
+            <canvas id="lienzo" width="1200" height="900">
+
+                su navegador no soporta elemento canvas
+            </canvas>
+        </section>
+
+    </body>
+</html>

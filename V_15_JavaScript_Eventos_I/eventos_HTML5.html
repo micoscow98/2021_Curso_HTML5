@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+    <script type="text/javascript">
+
+    var imagen;
+
+    function tipoflor(){
+
+        alert("Pensamientos");
+    }
+
+    function manejaflor(){
+
+        imagen=document.getElementsByTagName("img")[0];
+
+        imagen.addEventListener("mouseover", crecer, false);
+        imagen.addEventListener("mouseout", menguar, false);
+        imagen.addEventListener("click", tipoflor, false);
+    }
+
+    function crecer(){
+
+        imagen.width=225;
+        imagen.height=225;
+    }
+
+    function menguar(){
+
+        imagen.width=200;
+        imagen.height=200;
+    }
+
+    window.onload=manejaflor;
+
+    </script>
+
+    </head>
+    <body>
+
+    <p><img src="imagenes/1.jpg" alt=""></p>
+    </body>
+</html>

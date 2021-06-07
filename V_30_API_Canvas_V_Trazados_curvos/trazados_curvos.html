@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+
+            #lienzo{
+                border: 1px solid #f00;
+
+            }
+
+        </style>
+        <script type="text/javascript">
+
+        function comenzar(){
+
+            var elemento=document.getElementById("lienzo");
+
+            lienzo=elemento.getContext("2d");
+
+            lienzo.beginPath();
+
+            lienzo.arc(100,100,50,0,1,false);
+
+            lienzo.stroke();
+        }
+
+        window.addEventListener("load",comenzar,false);
+
+        </script>
+    </head>
+    <body>
+
+        <section>
+            <canvas id="lienzo" width="500" height="300">
+                su navegador no admite elemento canvas
+            </canvas>
+        </section>
+
+    </body>
+</html>

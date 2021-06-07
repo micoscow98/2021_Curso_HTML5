@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+
+            #lienzo{
+                border: 1px solid #f00;
+
+            }
+
+        </style>
+        <script type="text/javascript">
+
+        function comenzar(){
+
+            var elemento=document.getElementById("lienzo");
+
+            lienzo=elemento.getContext("2d");
+
+            lienzo.beginPath();
+
+            //lienzo.arc(250,100,100,0,Math.PI,true);
+
+            lienzo.moveTo(50,50);
+
+            lienzo.quadraticCurveTo(100,125,50,200);
+
+            lienzo.stroke();
+        }
+
+        window.addEventListener("load",comenzar,false);
+
+        </script>
+    </head>
+    <body>
+
+        <section>
+            <canvas id="lienzo" width="500" height="300">
+                su navegador no admite elemento canvas
+            </canvas>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    <style media="screen">
+    #lienzo{
+        border:1px solid #f00;
+
+    }
+
+
+    </style>
+
+    <script type="text/javascript">
+
+    function comenzar(){
+
+        var elemento=document.getElementById("lienzo");
+
+        lienzo=elemento.getContext("2d");
+
+        var imagen=new Image();
+
+        imagen.src="http://www.pildorasinformaticas.com/archivos/logos/html5online.jpg";
+
+        imagen.addEventListener("load",function(){
+            lienzo.drawImage(imagen,0,0,elemento.width,elemento.height)
+        },false);
+
+
+
+
+    }
+
+    window.addEventListener("load",comenzar,false);
+
+    </script>
+
+
+    </head>
+    <body>
+        <section>
+            <canvas id="lienzo" width="1200" height="900">
+
+                su navegador no soporta elemento canvas
+            </canvas>
+        </section>
+
+    </body>
+</html>

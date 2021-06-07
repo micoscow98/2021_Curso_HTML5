@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Documento sin título</title>
+    <style>
+      #principal {
+        width: 500px;
+        /*background-color: #00F;*/
+        text-align: center;
+        margin: 15px auto;
+        padding: 15px;
+        border: 3px solid #f00;
+        border-radius: 20px 5px 15px 40px;
+        box-shadow: #999 5px 5px 5px;
+        background: -moz-radial-gradient(
+          center,
+          ellipse,
+          #f00,
+          #cf0
+        ); /*degradado mozilla*/
+        /*background:-webkit-radial-gradient(top, #00F, #3FF);degradado chrome
+            background:-ms-radial-gradient(bottom, #00F, #3FF);degradado microsoft
+            background:-o-radial-gradient(right, #00F, #3FF);degradado opera*/
+      }
+
+      @font-face {
+        font-family: "MiPropiaFuente";
+        src: url("/home/tepper/Documentos/2021_Curso_HTML5/BAUHAUS/BAUHS93.ttf");
+      }
+
+      #titulo {
+        font: bold 36px "MiPropiaFuente";
+        text-shadow: #0f0 3px 3px 5px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="principal">
+      <span id="titulo">Estilos CSS3</span>
+    </header>
+  </body>
+</html>

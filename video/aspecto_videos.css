@@ -1,0 +1,12 @@
+@@charset "UTF-8";
+
+#video{
+    width:720px;
+    margin:20px auto;
+    background:#fc3;
+    padding:5px;
+    border:2px solid #e91515;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
